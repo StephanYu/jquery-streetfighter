@@ -1,0 +1,108 @@
+/** {
+  outline: red 1px solid;
+}*/
+
+body {
+  background-color: #000;
+}
+
+.main {
+  background-color: white;
+  margin-top: 110px;
+  padding-left: 100px;
+  min-width: 1200px;
+  height: 500px;
+}
+
+.ryu {
+  float: left;
+}
+
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+  width: 659px;
+  height: 494px;
+}
+
+.ryu-ready, .ryu-throwing, .ryu-cool {
+  display: none;
+} 
+
+.ryu-ready {
+  background-image: url('../images/ryu-ready-position.gif');
+}
+
+.ryu-still {
+  background-image: url('../images/ryu-standing-still.png');
+}
+
+.ryu-throwing {
+  background-image: url('../images/ryu-throwing-hadouken.png');
+}
+
+.ryu-cool {
+  background-image: url('../images/ryu-cool.gif');
+}
+
+.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+  background-repeat: no-repeat;
+}
+.hadouken {
+  background-image: url('../images/hadouken.gif');
+  width: 156px; 
+  height: 90px;
+  display: none;
+  position: relative;
+  top: 128px;
+  left: -212px;
+  float: left;
+}
+
+#text-content{
+  position: absolute;
+  left: 650px;
+  height: 425px;
+  width: 600px;
+  padding-top: 75px;
+}
+
+#text1, #text2 {
+  opacity: 1;
+  text-transform: uppercase;
+  font-family: Comic sans-serif;
+  font-style: italic;
+  font-size: 24px;
+  display: none;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  
+}
+#text1 {
+  top: 10px;
+  left: 110px;
+}
+
+#text2 {
+  bottom: 10px;
+  right: 20px;
+}
+
+#sf-logo {
+  background-image: url('../images/sf-logo.png');
+  display: none;
+  position: absolute;
+  height: 314px;
+  width: 682px;
+  right: 0px;
+}
+#capcom-logo {
+  background-image: url('../images/Capcom_logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  display: none;
+  position: absolute;
+  height: 314px;
+  width: 682px;
+  right: 0px;
+}

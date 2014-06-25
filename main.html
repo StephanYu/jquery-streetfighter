@@ -2,12 +2,30 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>Streetfigher</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
-	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
 <body>
+  <div class="main">
+    <div class="ryu">
+      <div class="ryu-still ryu-current"></div>
+      <div class="ryu-ready ryu-current"></div>
+      <div class="ryu-throwing ryu-current"></div>
+      <div class="ryu-cool ryu-current"></div>
+    </div>
+    <div class="hadouken"></div>
+    <div id="text-content">
+      <div id="sf-logo"></div>
+      <div id="capcom-logo"></div>
+      <div id="text1">Click on Ryu if you want to shoot Hadouken flareballs</div>
+      <div id="text2">Press x to strike a cool pose</div>
+    </div>
+  </div>
+  <audio id="hadouken-sound" src="sound/hadouken.mp3"></audio>
+  <audio id="sf-theme-song" src="sound/street-fighter-theme.mp3"></audio>
+  <audio id="cool-sound" src="sound/cool.mp3"></audio>
 </body>
 </html>
