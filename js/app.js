@@ -2,7 +2,9 @@ $(document).ready(function() {
   intro();
   playGame();
 });
-  var flag = false;
+
+  var KEYS = { x: 88 };
+  var isMouseDown = false;
   function playGame() {
     $('.ryu').mouseenter(function() {
       $('.ryu-current').hide();
@@ -14,7 +16,7 @@ $(document).ready(function() {
     })
     .mousedown(function() {
       playHadouken();
-      flag = true;
+      isMouseDown = true;
       $('.ryu-current').hide();
       $('.ryu-throwing').show();
       $('.hadouken').finish().show()
@@ -32,23 +34,25 @@ $(document).ready(function() {
     .mouseup(function() {
       $('.ryu-current').hide();
       $('.ryu-ready').show();
-      flag = false;
+      isMouseDown = false;
     });
   
     $(document).keydown(function(event) {
-      if (event.which == 88 && flag) {
-        $('.ryu-current').hide();
-        $('.ryu-throwing').show();
-      }
-
-      else if (event.which == 88) {
-        playCool();
-        $('.ryu-current').hide();
-        $('.ryu-cool').show();
+      if ( event.which === KEYS.x ) {
+        if ( isMouseDown ) {
+          // ignore 'x' action while mousedown
+          $('.ryu-current').hide();
+          $('.ryu-throwing').show();
+        } else {
+          // x: Ryu should be 'cool'
+          playCool();
+          $('.ryu-current').hide();
+          $('.ryu-cool').show();
+        }
       }
     })
     .keyup(function(event) {
-      if (event.which == 88) {
+      if (event.which === KEYS.x) {
         $('#cool-sound')[0].pause();
         $('#cool-sound')[0].load();
         $('.ryu-current').hide();
